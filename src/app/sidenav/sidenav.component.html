@@ -1,0 +1,27 @@
+<app-top-bar
+      (toggleSidenav)="sidenav.toggle()">
+</app-top-bar>
+
+
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #sidenav class="sidenav" mode="over">
+    <mat-nav-list>
+      <nav>
+        <ul>
+          <li routerLinkActive="active" routerLink="/">
+            <mat-icon></mat-icon>Home
+          </li>
+          <li routerLinkActive="active" routerLink="/spaceholder">
+            <mat-icon></mat-icon>Spaceholder
+          </li>
+        </ul>
+      </nav>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
