@@ -1,0 +1,8 @@
+.sidenav-container {
+    min-height: calc(100% - 64px);
+    height: auto;
+}
+
+.sidenav {
+    width: 220px;
+}
