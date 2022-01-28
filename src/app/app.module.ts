@@ -7,9 +7,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { SpaceholderComponent } from './spaceholder/spaceholder.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from './material.module';
 
 
@@ -17,9 +17,9 @@ import { MaterialModule } from './material.module';
   declarations: [
     AppComponent,
     TopBarComponent,
+    SidenavComponent,
     HomeComponent,
     SpaceholderComponent,
-    SidenavComponent
   ],
   imports: [
     BrowserModule,
