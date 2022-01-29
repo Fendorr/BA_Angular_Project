@@ -11,6 +11,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { SpaceholderComponent } from './spaceholder/spaceholder.component';
 import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { MaterialModule } from './material.module';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
+    FlexLayoutModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'spaceholder', component: SpaceholderComponent }
