@@ -1,53 +1,64 @@
-<div class="default-content-container">
-    <h1>Dynamic Text Showcase</h1>
-    <mat-grid-list class="grid-layout-custom" cols="3" rowHeight="1:1" gutterSize="10px">
-        <mat-grid-tile class="grid-tile-custom">
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est Lorem ipsum dolor sit amet.
-            </p>
-        </mat-grid-tile>
-        <mat-grid-tile class="grid-tile-custom">
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est Lorem ipsum dolor sit amet.
-            </p>
-        </mat-grid-tile>
-        <mat-grid-tile class="grid-tile-custom">
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est Lorem ipsum dolor sit amet.
-            </p>
-        </mat-grid-tile>
-    </mat-grid-list>
+<h1>Dynamic Columns Showcase</h1>
+<p>Resize the window to see Angular "flex-layout" in action</p>
+<br>
+<div fxLayout="row-wrap" fxLayout.lt-sm="column" fxLayoutGap="16px">
+    <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-md="0 1 calc(50% - 16px)" fxFlex.lt-sm="100%">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        sanctus
+        est Lorem ipsum dolor sit amet.
+    </div>
+    <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-md="0 1 calc(50% - 16px)" fxFlex.lt-sm="100%">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        sanctus
+        est Lorem ipsum dolor sit amet.
+    </div>
+    <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-md="0 1 calc(50% - 16px)" fxFlex.lt-sm="100%">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        sanctus
+        est Lorem ipsum dolor sit amet.
+    </div>
 </div>
+
+
+<!--MatGridList Lösung, ungeeignet, da mat-grid-list elemente responsive aber nicht deren content-->
+<!-- <mat-grid-list class="grid-layout-custom" [cols]="cols" rowHeight="4:3" gutterSize="10px">
+        <mat-grid-tile>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+                dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                sanctus
+                est Lorem ipsum dolor sit amet.
+            </p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+                dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                sanctus
+                est Lorem ipsum dolor sit amet.
+            </p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+                dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                sanctus
+                est Lorem ipsum dolor sit amet.
+            </p>
+        </mat-grid-tile>
+    </mat-grid-list> -->
