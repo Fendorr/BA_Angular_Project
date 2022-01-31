@@ -1,27 +1,38 @@
-<div fxFlex fxLayout="column" style="height: 100vh;">
-  <app-top-bar (toggleSidenav)="sidenav.toggle()">
-  </app-top-bar>
+<div>
+  <app-top-bar (toggleSidenav)="sidenav.toggle()"></app-top-bar>
 
 
   <mat-sidenav-container class="sidenav-container">
 
     <mat-sidenav #sidenav class="sidenav" mode="over">
       <mat-nav-list>
-        <nav>
-          <ul>
-            <li routerLinkActive="active" routerLink="/">
-              <mat-icon></mat-icon>Home
-            </li>
-            <li routerLinkActive="active" routerLink="/spaceholder">
-              <mat-icon></mat-icon>Spaceholder
-            </li>
-          </ul>
-        </nav>
+
+        <!--Workaround, da in mat-nav-list by default das erste Elemente initial angewählt ist-->
+        <a mat-list-item routerLink="/" style="height: 0;"></a>
+
+        <a mat-list-item
+          (click)="sidenav.close()"
+          routerLink="/"
+          routerLinkActive="active">
+          <mat-icon mat-list-icon>dashboard</mat-icon>
+          <div class="nav-text" fxHide.lt-sm>Responsive Grid</div>
+        </a>
+
+        <mat-divider></mat-divider>
+
+        <a mat-list-item
+          (click)="sidenav.close()"
+          routerLink="/spaceholder"
+          routerLinkActive="active">
+          <mat-icon mat-list-icon>help</mat-icon>
+          <div class="nav-text" fxHide.lt-sm>Spaceholder</div>
+        </a>
+        
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content fxFlex fxLayout="row" fxLayoutAlign="center start" style="height: 100vh; margin-left: 50px; margin-right: 50px;">
-      <ng-content></ng-content>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
 
   </mat-sidenav-container>
