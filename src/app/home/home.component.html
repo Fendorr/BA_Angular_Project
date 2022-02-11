@@ -1,32 +1,36 @@
 <h1>Dynamic Columns Showcase</h1>
 <p>Resize the window to see Angular "flex-layout" in action</p>
 <br>
-<div fxLayout="row-wrap" fxLayout.lt-sm="column" fxLayoutGap="16px">
-    <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et
-        dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-        sanctus
-        est Lorem ipsum dolor sit amet.
+
+<div fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row-wrap" fxLayout.lt-sm="column" fxLayoutGap="16px">
+        <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
+            {{text}}
+        </div>
+        <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
+            {{text}}
+        </div>
+        <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
+            {{text}}
+        </div>
     </div>
-    <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et
-        dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-        sanctus
-        est Lorem ipsum dolor sit amet.
-    </div>
-    <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et
-        dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-        sanctus
-        est Lorem ipsum dolor sit amet.
+    <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutGap="16px">
+        <img fxFlex="1 2 calc(60% - 16px)"  class="responsive-img"
+            src="assets/img/dog-puppy-on-garden-royalty-free-image-1586966191.jpg">
+        <img fxFlex="1 2 calc(40% - 16px)"  class="responsive-img"
+            src="assets/img/robbenbaby8.jpg">
     </div>
 </div>
+
+
+
+<!--flex-layout Grid Example-->
+<!-- <div gdColumns="repeat(auto-fill, minmax(200px, 1fr))" gdgap="10px" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:10px">
+    <div>{{text}}</div>
+    <div>{{text}}</div>
+    <div>{{text}}</div>
+    <div>{{text}}</div>
+</div> -->
 
 
 <!--MatGridList Lösung, ungeeignet, da mat-grid-list elemente responsive aber nicht deren content-->
