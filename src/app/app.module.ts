@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
-import { SpaceholderComponent } from './spaceholder/spaceholder.component';
+import { FormsComponent } from './spaceholder/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -20,7 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TopBarComponent,
     SidenavComponent,
     HomeComponent,
-    SpaceholderComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'spaceholder', component: SpaceholderComponent }
+      { path: 'form', component: FormsComponent }
     ])
   ],
   providers: [],
