@@ -23,15 +23,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'form', component: FormsComponent }
-    ])
+    { path: '', component: HomeComponent },
+    { path: 'form', component: FormsComponent }
+], {
+    initialNavigation: 'enabledBlocking'
+})
   ],
   providers: [],
   bootstrap: [AppComponent]
