@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
+
   name: string = "";
 
   checkoutForm = this.formBuilder.group({
@@ -17,7 +18,8 @@ export class FormsComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+
   }
 
   onSubmit(): void {
