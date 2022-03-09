@@ -20,5 +20,16 @@
     </label>
     <input id="age" type="number" formControlName="age">
   </div>
+
   <button class="button" type="submit">Submit</button>
 </form>
+
+<p>The two-way bound variable is: {{name}}</p>
+<label for="ngModel-example">[(ngModel)]: </label>
+<input id="ngModel-example" [(ngModel)]="name" />
+
+<!-- Genauer: -->
+<p>
+  <label for="ngModel-split-example">[ngModel] und (ngModelChange): </label>
+  <input id="ngModel-split-example" [ngModel]="name" (ngModelChange)="name=$event">
+</p>

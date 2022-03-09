@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsComponent } from './spaceholder/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,12 +28,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
+    FormsModule,
     RouterModule.forRoot([
-    { path: '', component: HomeComponent },
-    { path: 'form', component: FormsComponent }
-], {
-    initialNavigation: 'enabledBlocking'
-})
+      { path: '', component: HomeComponent },
+      { path: 'form', component: FormsComponent }
+    ], {
+      initialNavigation: 'enabledBlocking'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
