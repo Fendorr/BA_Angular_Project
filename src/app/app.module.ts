@@ -13,15 +13,18 @@ import { FormsComponent } from './spaceholder/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { ExampleComponent } from './example/example.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     TopBarComponent,
     SidenavComponent,
     HomeComponent,
     FormsComponent,
-  ],
+    ExampleComponent,
+    
+   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,

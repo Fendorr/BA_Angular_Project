@@ -24,14 +24,31 @@
   <button class="button" type="submit">Submit</button>
 </form>
 
+
 <p>The two-way bound variable is: {{name}}</p>
-<span>
+
+<!--Ohne NgModel:-->
+<p>
+  <label for="NOngModel-example">[value] und (input):</label>
+  <input id="NOngModel-example" [value]="name" (input)="name = $any($event.target).value">
+</p>
+
+
+
+<!--Mit NgModel:-->
+<p>
   <label for="ngModel-example">[(ngModel)]: </label>
   <input id="ngModel-example" [(ngModel)]="name" />
-</span>
+</p>
 
-<!-- Genauer: -->
+
+<!-- NgModel geteilt in Property-Binding & Event-Binding -->
 <p>
   <label for="ngModel-split-example">[ngModel] und (ngModelChange): </label>
   <input id="ngModel-split-example" [ngModel]="name" (ngModelChange)="name=$event">
 </p>
+
+
+
+
+<app-example></app-example>
