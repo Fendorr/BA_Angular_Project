@@ -23,3 +23,7 @@
 
 
 <app-example></app-example>
+
+<app-InputShowcase [name]="name"></app-InputShowcase>
+<app-OutputShowcase (newNameEvent)="handleNameChange($event)"></app-OutputShowcase>
+<p>The name (set by the child) is: {{name}}</p>

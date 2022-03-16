@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingsComponent implements OnInit {
 
-  name: string = "";
+  name:string="DEFAULTNAME";
+
+
+  handleNameChange(newName: string) {
+    this.name = newName;
+  }
 
   constructor() { }
 
