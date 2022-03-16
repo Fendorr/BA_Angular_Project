@@ -8,8 +8,6 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormsComponent implements OnInit {
 
-  name: string = "";
-
   checkoutForm = this.formBuilder.group({
     firstName: '',
     lastName: '',

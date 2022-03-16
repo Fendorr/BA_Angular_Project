@@ -9,16 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
-import { FormsComponent } from './spaceholder/forms.component';
+import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ExampleComponent } from './example/example.component';
-import { InputOutputShowcaseComponent } from './InputOutputShowcase/InputOutputShowcase.component';
+import { InputOutputShowcaseComponent } from './InputShowcase/InputShowcase.component';
 import { BindingsComponent } from './Bindings/Bindings.component';
+import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     TopBarComponent,
     SidenavComponent,
@@ -27,6 +28,7 @@ import { BindingsComponent } from './Bindings/Bindings.component';
     ExampleComponent,
     InputOutputShowcaseComponent,
     BindingsComponent,
+      OutputShowcaseComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -37,8 +39,7 @@ import { BindingsComponent } from './Bindings/Bindings.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'form', component: FormsComponent },
-      { path: 'communication', component: InputOutputShowcaseComponent },
+      { path: 'forms', component: FormsComponent },
       { path: 'bindings', component: BindingsComponent },
     ], {
       initialNavigation: 'enabledBlocking'
