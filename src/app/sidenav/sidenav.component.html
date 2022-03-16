@@ -27,6 +27,26 @@
           <mat-icon>edit_note</mat-icon>
           <div class="nav-text" fxHide.lt-sm>Forms</div>
         </a>
+
+        <mat-divider></mat-divider>
+
+        <a mat-list-item
+          (click)="sidenav.close()"
+          routerLink="/communication"
+          routerLinkActive="active">
+          <mat-icon>edit_note</mat-icon>
+          <div class="nav-text" fxHide.lt-sm>Communication</div>
+        </a>
+
+        <mat-divider></mat-divider>
+
+        <a mat-list-item
+          (click)="sidenav.close()"
+          routerLink="/bindings"
+          routerLinkActive="active">
+          <mat-icon>edit_note</mat-icon>
+          <div class="nav-text" fxHide.lt-sm>Bindings</div>
+        </a>
         
       </mat-nav-list>
     </mat-sidenav>

@@ -14,16 +14,19 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ExampleComponent } from './example/example.component';
+import { InputOutputShowcaseComponent } from './InputOutputShowcase/InputOutputShowcase.component';
+import { BindingsComponent } from './Bindings/Bindings.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [			
     AppComponent,
     TopBarComponent,
     SidenavComponent,
     HomeComponent,
     FormsComponent,
     ExampleComponent,
-    
+    InputOutputShowcaseComponent,
+    BindingsComponent,
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -34,7 +37,9 @@ import { ExampleComponent } from './example/example.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'form', component: FormsComponent }
+      { path: 'form', component: FormsComponent },
+      { path: 'communication', component: InputOutputShowcaseComponent },
+      { path: 'bindings', component: BindingsComponent },
     ], {
       initialNavigation: 'enabledBlocking'
     })
