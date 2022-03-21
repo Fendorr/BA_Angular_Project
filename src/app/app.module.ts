@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -17,9 +18,10 @@ import { ExampleComponent } from './example/example.component';
 import { InputOutputShowcaseComponent } from './InputShowcase/InputShowcase.component';
 import { BindingsComponent } from './Bindings/Bindings.component';
 import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.component';
+import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
     TopBarComponent,
     SidenavComponent,
@@ -28,7 +30,8 @@ import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.compone
     ExampleComponent,
     InputOutputShowcaseComponent,
     BindingsComponent,
-      OutputShowcaseComponent
+    OutputShowcaseComponent,
+    HTTPRequestsComponent,
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -37,6 +40,7 @@ import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.compone
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'forms', component: FormsComponent },
