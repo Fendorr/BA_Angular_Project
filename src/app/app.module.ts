@@ -14,7 +14,7 @@ import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { ExampleComponent } from './example/example.component';
+import { SeperateBindingExampleComponent } from './SeperateBindingExample/SeperateBindingExample.component';
 import { InputOutputShowcaseComponent } from './InputShowcase/InputShowcase.component';
 import { BindingsComponent } from './Bindings/Bindings.component';
 import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.component';
@@ -27,7 +27,7 @@ import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
     SidenavComponent,
     HomeComponent,
     FormsComponent,
-    ExampleComponent,
+    SeperateBindingExampleComponent,
     InputOutputShowcaseComponent,
     BindingsComponent,
     OutputShowcaseComponent,

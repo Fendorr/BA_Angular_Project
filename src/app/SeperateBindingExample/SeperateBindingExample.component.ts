@@ -7,9 +7,9 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   <p>The name is: {{name}}</p>
   <input [value]="name" (input)="handleChange($any($event.target).value)">
   `,
-  styleUrls: ['./example.component.css']
+  styleUrls: ['./SeperateBindingExample.component.css']
 })
-export class ExampleComponent {
+export class SeperateBindingExampleComponent {
 
   name: string = "";
 
