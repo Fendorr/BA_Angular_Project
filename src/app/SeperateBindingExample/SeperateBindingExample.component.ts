@@ -2,7 +2,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-SeperateBindingExample',
   template: `
   <p>The name is: {{name}}</p>
   <input [value]="name" (input)="handleChange($any($event.target).value)">

@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { HomeComponent } from './home/home.component';
+import { GridComponent } from './Grid/Grid.component';
 import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -25,7 +25,7 @@ import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
     AppComponent,
     TopBarComponent,
     SidenavComponent,
-    HomeComponent,
+    GridComponent,
     FormsComponent,
     SeperateBindingExampleComponent,
     InputOutputShowcaseComponent,
@@ -42,7 +42,7 @@ import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: GridComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'bindings', component: BindingsComponent },
     ], {
