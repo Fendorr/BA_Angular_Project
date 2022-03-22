@@ -9,7 +9,11 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif; 
     height: 100%;
     overflow: hidden;
-    }
+}
+
+.container{
+    padding-bottom: 10vh;
+}
 
 
 

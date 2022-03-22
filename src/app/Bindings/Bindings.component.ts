@@ -9,7 +9,6 @@ export class BindingsComponent implements OnInit {
 
   name:string="DEFAULTNAME";
 
-
   handleNameChange(newName: string) {
     this.name = newName;
   }

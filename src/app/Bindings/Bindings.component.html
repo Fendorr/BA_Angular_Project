@@ -1,25 +1,65 @@
-<p>The two-way bound variable is: {{name}}</p>
+<div class="container">
+  <!-- Two-way binding card -->
+  <mat-card class="custom-card">
+    <mat-card-title>Two-way Binding</mat-card-title>
+    <mat-card-subtitle>showcases usage of a two-way bound "name"-property</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <p>The two-way bound variable is: {{name}}</p>
 
-<!--Ohne NgModel:-->
-<p>
-  <label for="NOngModel-example">[value] und (input):</label>
-  <input id="NOngModel-example" [value]="name" (input)="name = $any($event.target).value">
-</p>
+      <!--Ohne NgModel:-->
+      <p>
+        <label for="NOngModel-example">[value] und (input): </label>
+        <input id="NOngModel-example" [value]="name" (input)="name = $any($event.target).value">
+      </p>
 
-<!--Mit NgModel:-->
-<p>
-  <label for="ngModel-example">[(ngModel)]: </label>
-  <input id="ngModel-example" [(ngModel)]="name" />
-</p>
+      <!--Mit NgModel:-->
+      <p>
+        <label for="ngModel-example">[(ngModel)]: </label>
+        <input id="ngModel-example" [(ngModel)]="name" />
+      </p>
 
-<!-- NgModel geteilt in Property-Binding & Event-Binding -->
-<p>
-  <label for="ngModel-split-example">[ngModel] und (ngModelChange): </label>
-  <input id="ngModel-split-example" [ngModel]="name" (ngModelChange)="name=$event">
-</p>
+      <!-- NgModel geteilt in Property-Binding & Event-Binding -->
+      <p>
+        <label for="ngModel-split-example">[ngModel] und (ngModelChange): </label>
+        <input id="ngModel-split-example" [ngModel]="name" (ngModelChange)="name=$event">
+      </p>
+    </mat-card-content>
+  </mat-card>
 
-<app-SeperateBindingExample></app-SeperateBindingExample>
+  <!-- seperate binding card -->
+  <mat-card class="custom-card">
+    <mat-card-title>Binding in seperate component</mat-card-title>
+    <mat-card-subtitle>showcases usage of same "name"-property in seperate component</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <app-SeperateBindingExample></app-SeperateBindingExample>
+    </mat-card-content>
+  </mat-card>
 
-<app-InputShowcase [name]="name"></app-InputShowcase>
-<app-OutputShowcase (newNameEvent)="handleNameChange($event)"></app-OutputShowcase>
-<p>The name (set by the child) is: {{name}}</p>
+  <!-- send data from parent to child -->
+  <mat-card class="custom-card">
+    <mat-card-title>Send data from parent to child</mat-card-title>
+    <mat-card-subtitle>showcases communication between components using @Input-Decorator</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <app-InputShowcase [name]="name"></app-InputShowcase>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- send data from child to parent -->
+  <mat-card class="custom-card">
+    <mat-card-title>Send data from child to parent</mat-card-title>
+    <mat-card-subtitle>showcases communication between components using @Output-Decorator and custom EventEmitter
+    </mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <app-OutputShowcase (newNameEvent)="handleNameChange($event)"></app-OutputShowcase>
+      <p>The name (set by the child) is: {{name}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
