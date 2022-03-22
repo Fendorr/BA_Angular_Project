@@ -7,6 +7,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
+  isSubmitted: boolean = false;
 
   checkoutForm = this.formBuilder.group({
     firstName: '',
@@ -21,7 +22,12 @@ export class FormsComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.isSubmitted = true;
     console.warn('Form submitted', this.checkoutForm.value)
+  }
+
+  resetForm(): void{
+    this.isSubmitted = false;
     this.checkoutForm.reset();
   }
 

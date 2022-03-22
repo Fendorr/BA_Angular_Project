@@ -1,0 +1,15 @@
+.full-width-form-field{
+    width: 100%;
+}
+
+.custom-form-card{
+    max-width: 40vh;
+}
+
+.title{
+    text-align: center;
+}
+
+.reset-btn{
+    margin-bottom: 20px;
+}

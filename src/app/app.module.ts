@@ -14,14 +14,16 @@ import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 import { SeperateBindingExampleComponent } from './SeperateBindingExample/SeperateBindingExample.component';
 import { InputOutputShowcaseComponent } from './InputShowcase/InputShowcase.component';
 import { BindingsComponent } from './Bindings/Bindings.component';
 import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.component';
 import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [					
+  declarations: [
     AppComponent,
     TopBarComponent,
     SidenavComponent,
@@ -32,7 +34,7 @@ import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
     BindingsComponent,
     OutputShowcaseComponent,
     HTTPRequestsComponent,
-   ],
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
@@ -41,6 +43,8 @@ import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
     FlexLayoutModule,
     FormsModule,
     HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
     RouterModule.forRoot([
       { path: '', component: GridComponent },
       { path: 'forms', component: FormsComponent },
