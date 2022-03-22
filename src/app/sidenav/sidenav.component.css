@@ -6,3 +6,16 @@
 .nav-text {
     margin-left: 5px;
 }
+
+/*Firefox, Edge, IE ..*/
+.content {
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+/*Chrome*/
+.content::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}

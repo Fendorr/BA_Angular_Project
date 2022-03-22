@@ -1,25 +1,60 @@
-<h1>Dynamic Columns Showcase</h1>
-<p>Resize the window to see Angular "flex-layout" in action</p>
-<br>
+<div class="container">
+    <h1>Dynamic Columns and Grid Showcase</h1>
+    <p>Resize the window to see Angular "flex-layout" in action</p>
+    <br>
 
-<div fxLayout="column" fxLayoutGap="20px">
-    <div fxLayout="row-wrap" fxLayout.lt-sm="column" fxLayoutGap="16px">
-        <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
-            {{text}}
+    <div fxLayout="column" fxLayoutGap="16px">
+        <div fxLayout="row-wrap" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
+                {{text}}
+            </div>
+            <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
+                {{text}}
+            </div>
+            <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
+                {{text}}
+            </div>
         </div>
-        <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
-            {{text}}
+        <br>
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <img fxFlex="calc(55% - 16px)" class="responsive-img" src="assets/img/doggo1.jpg">
+            <img fxFlex="calc(45% - 16px)" class="responsive-img" src="assets/img/robbenbaby1.jpg">
         </div>
-        <div fxFlex="0 1 calc(33.3% - 16px)" fxFlex.lt-sm="100%">
-            {{text}}
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <div fxFlex="calc(50% - 16px)" fxLayout="column" fxLayout.lt-sm="row" fxLayoutGap="16px">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/doggo2.jpg">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/robbenbaby4.jpg">
+            </div>
+            <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/doggo5.jpeg">
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutGap="16px">
-        <img fxFlex="1 2 calc(60% - 16px)" class="responsive-img"
-            src="assets/img/dog-puppy-on-garden-royalty-free-image-1586966191.jpg">
-        <img fxFlex="1 2 calc(40% - 16px)" class="responsive-img" src="assets/img/robbenbaby8.jpg">
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <img fxFlex="calc(33% - 16px)" class="responsive-img" src="assets/img/doggo4.jpg">
+            <img fxFlex="calc(33% - 16px)" class="responsive-img" src="assets/img/robbenbaby2.jpg">
+            <img fxFlex="calc(33% - 16px)" class="responsive-img" src="assets/img/doggo3.webp">
+            <!-- <div fxFlex="calc(50% - 16px)" fxLayout="column" fxLayout.lt-lg="row" fxLayoutGap="16px">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/doggo4.jpg">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/robbenbaby2.jpg">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/doggo3.webp">
+            </div> -->
+            <!-- <div fxFlex="calc(50% - 16px)" fxLayout="column" fxLayout.lt-lg="row" fxLayoutGap="16px">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/doggo3.webp">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" src="assets/img/robbenbaby3.jpg">
+            </div> -->
+        </div>
+        <!-- <div gdcolumns="repeat(auto-fill, minmax(200px, 1fr))" gdgap="10px" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px">
+            <img fxFill gdcolumn="auto / span 2" gdrow="auto / span 2" style="grid-area: auto / auto / span 2 / span 2" src="assets/img/doggo5.jpeg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/robbenbaby1.jpg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/robbenbaby2.jpg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/robbenbaby3.jpg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/doggo1.jpg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/doggo4.jpg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/robbenbaby4.jpg">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/doggo3.webp">
+            <img fxFill gdcolumn="auto / span 2" style="grid-column: auto / span 2"  src="assets/img/doggo2.jpg">
+        </div> -->
     </div>
 </div>
+
 
 
 
