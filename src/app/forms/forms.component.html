@@ -1,25 +1,29 @@
-<h1>Angular Forms Showcase</h1>
-<p>Type something in the form and submit it to see Angular FormBuilder in action</p>
+<div class="container">
+  <h1>Angular Forms Showcase</h1>
+  <p>Type something in the form and submit it to see Angular FormBuilder in action</p>
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="firstName">
-      firstName
-    </label>
-    <input id="firstName" type="text" formControlName="firstName">
-  </div>
-  <div>
-    <label for="lastName">
-      lastName
-    </label>
-    <input id="lastName" type="text" formControlName="lastName">
-  </div>
-  <div>
-    <label for="age">
-      age
-    </label>
-    <input id="age" type="number" formControlName="age">
-  </div>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">
+        firstName
+      </label>
+      <input id="firstName" type="text" formControlName="firstName">
+    </div>
+    <div>
+      <label for="lastName">
+        lastName
+      </label>
+      <input id="lastName" type="text" formControlName="lastName">
+    </div>
+    <div>
+      <label for="age">
+        age
+      </label>
+      <input id="age" type="number" formControlName="age">
+    </div>
 
-  <button class="button" type="submit">Submit</button>
-</form>
+    <p>The current form status is: {{checkoutForm.status}}</p>
+
+    <button class="button" type="submit">Submit</button>
+  </form>
+</div>
