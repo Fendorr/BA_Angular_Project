@@ -15,7 +15,7 @@
           routerLink="/"
           routerLinkActive="active">
           <mat-icon>dashboard</mat-icon>
-          <div class="nav-text" fxHide.lt-sm>Responsive Grid</div>
+          <div class="nav-text">Responsive Grid</div>
         </a>
 
         <mat-divider></mat-divider>
@@ -25,7 +25,7 @@
           routerLink="/forms"
           routerLinkActive="active">
           <mat-icon>edit_note</mat-icon>
-          <div class="nav-text" fxHide.lt-sm>Forms</div>
+          <div class="nav-text">Forms</div>
         </a>
 
         <mat-divider></mat-divider>
@@ -35,8 +35,18 @@
           routerLink="/bindings"
           routerLinkActive="active">
           <mat-icon>swap_vert</mat-icon>
-          <div class="nav-text" fxHide.lt-sm>Bindings</div>
+          <div class="nav-text">Bindings</div>
         </a>
+
+        <mat-divider></mat-divider>
+
+        <a mat-list-item
+        (click)="sidenav.close()"
+        routerLink="/http"
+        routerLinkActive="active">
+        <mat-icon>http</mat-icon>
+        <div class="nav-text">HTTP-Request</div>
+      </a>
         
       </mat-nav-list>
     </mat-sidenav>

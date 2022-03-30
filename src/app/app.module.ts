@@ -49,6 +49,7 @@ import { MatButtonModule } from '@angular/material/button';
       { path: '', component: GridComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'bindings', component: BindingsComponent },
+      { path: 'http', component: HTTPRequestsComponent },
     ], {
       initialNavigation: 'enabledBlocking'
     })

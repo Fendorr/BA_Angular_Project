@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError, retry, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { catchError, Observable, retry, throwError } from 'rxjs';
 
 export interface Data {
   id: number;
@@ -12,15 +12,27 @@ export interface Data {
 @Injectable({
   providedIn: 'root'
 })
-export class HttpService {
+export class DataService {
   url = "assets/dummyData.json";
 
   constructor(private http: HttpClient) { }
 
   getData(){
-    return this.http.get<Data>(this.url)
+    return this.http.get<Data[]>(this.url)
       .pipe(
         retry(3),
+        catchError(this.handleError)
+      );
+  }
+
+  getDataResponse(): Observable<HttpResponse<Data>> {
+    return this.http.get<Data>(
+      this.url, { observe: 'response' });
+  }
+
+  makeIntentionalError() {
+    return this.http.get('not/a/real/url')
+      .pipe(
         catchError(this.handleError)
       );
   }

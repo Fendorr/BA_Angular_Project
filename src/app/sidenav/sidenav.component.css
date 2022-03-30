@@ -3,8 +3,12 @@
     height: auto;
 }
 
+.mat-sidenav {
+    width: 240px;
+}
+
 .nav-text {
-    margin-left: 5px;
+    margin-left: 30px;
 }
 
 /*Firefox, Edge, IE ..*/
