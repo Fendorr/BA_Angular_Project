@@ -26,15 +26,12 @@ export class DataService {
   }
 
   getDataResponse(): Observable<HttpResponse<Data>> {
-    return this.http.get<Data>(
-      this.url, { observe: 'response' });
+    return this.http.get<Data>(this.url, { observe: 'response' });
   }
 
   makeIntentionalError() {
     return this.http.get('not/a/real/url')
-      .pipe(
-        catchError(this.handleError)
-      );
+      .pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse) {
