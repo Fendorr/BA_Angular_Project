@@ -45,6 +45,7 @@ export class DataService {
         `Backend returned code ${error.status}, body was: `, error.error);
     }
     // Return an observable with a user-facing error message.
-    return throwError(() => new Error('Something bad happened; please try again later.'));
+    return throwError(() => new Error("We tried to access /not/a/real/url which doesn`t exist, therefore the error is thrown. "
+                                    + "Check the console for more information."));
   }
 }

@@ -1,12 +1,11 @@
-<div class="container" style="margin-top: 20px;">
+<div class="container" fxLayout="column" fxLayoutAlign="start center">
   <h1>HTTP-Requests Showcase</h1>
   <p>Click the buttons to fetch data from src/assets/dummyData.json</p>
   <br>
 
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
-    <button mat-raised-button (click)="clear(); showData()">showData</button>
-    <button mat-raised-button (click)="clear(); showDataResponse()">showDataResponse</button>
-    <button mat-raised-button (click)="clear(); makeError()">makeError</button>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px">
+    <button mat-raised-button (click)="clear(); showData()" fxLayoutAlign="center">showData</button>
+    <button mat-raised-button (click)="clear(); makeError()" fxLayoutAlign="center">makeError</button>
   </div>
 
   <div *ngIf="data.length > 0">
@@ -20,13 +19,6 @@
     </ul>
   </div>
 
-  <div *ngIf="headers">
-    <ul>
-      <li *ngFor="let header of headers">
-        {{header}}
-      </li>
-    </ul>
-  </div>
+  <div *ngIf="error" class="error">Error: {{error}}</div>
 
-  <p *ngIf="error" class="error">{{error | json}}</p>
 </div>
