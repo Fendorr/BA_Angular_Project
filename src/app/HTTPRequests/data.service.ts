@@ -18,11 +18,8 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getData(){
-    return this.http.get<Data[]>(this.url)
-      .pipe(
-        retry(3),
-        catchError(this.handleError)
-      );
+    //returns an observable
+    return this.http.get<Data[]>(this.url);
   }
 
   getDataResponse(): Observable<HttpResponse<Data>> {
