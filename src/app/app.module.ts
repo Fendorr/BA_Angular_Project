@@ -36,7 +36,7 @@ import { MatButtonModule } from '@angular/material/button';
     HTTPRequestsComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
@@ -50,9 +50,7 @@ import { MatButtonModule } from '@angular/material/button';
       { path: 'forms', component: FormsComponent },
       { path: 'bindings', component: BindingsComponent },
       { path: 'http', component: HTTPRequestsComponent },
-    ], {
-      initialNavigation: 'enabledBlocking'
-    })
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
