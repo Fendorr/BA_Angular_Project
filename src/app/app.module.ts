@@ -38,7 +38,7 @@ import { environment } from '../environments/environment';
     HTTPRequestsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
@@ -48,11 +48,13 @@ import { environment } from '../environments/environment';
     MatInputModule,
     MatButtonModule,
     RouterModule.forRoot([
-      { path: '', component: GridComponent },
-      { path: 'forms', component: FormsComponent },
-      { path: 'bindings', component: BindingsComponent },
-      { path: 'http', component: HTTPRequestsComponent },
-    ]),
+    { path: '', component: GridComponent },
+    { path: 'forms', component: FormsComponent },
+    { path: 'bindings', component: BindingsComponent },
+    { path: 'http', component: HTTPRequestsComponent },
+], {
+    initialNavigation: 'enabledBlocking'
+}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
