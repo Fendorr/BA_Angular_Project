@@ -21,6 +21,8 @@ import { BindingsComponent } from './Bindings/Bindings.component';
 import { OutputShowcaseComponent } from './OutputShowcase/OutputShowcase.component';
 import { HTTPRequestsComponent } from './HTTPRequests/HTTPRequests.component';
 import { MatButtonModule } from '@angular/material/button';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,13 @@ import { MatButtonModule } from '@angular/material/button';
       { path: 'forms', component: FormsComponent },
       { path: 'bindings', component: BindingsComponent },
       { path: 'http', component: HTTPRequestsComponent },
-    ])
+    ]),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
