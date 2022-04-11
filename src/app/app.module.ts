@@ -7,8 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { TopBarComponent } from './topbar/topbar.component';
+import { NavBarComponent } from './NavBar/NavBar.component';
 import { GridComponent } from './Grid/Grid.component';
 import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material.module';
@@ -28,7 +28,7 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     TopBarComponent,
-    SidenavComponent,
+    NavBarComponent,
     GridComponent,
     FormsComponent,
     SeperateBindingExampleComponent,
