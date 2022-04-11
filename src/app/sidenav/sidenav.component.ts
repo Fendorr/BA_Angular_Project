@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { navItems } from './navItems';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,7 +7,8 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  
+  items = navItems;
+
   constructor() { }
 
   ngOnInit() {

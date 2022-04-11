@@ -26,5 +26,18 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name":"http-request",
+      "urls":["/app/assets/dummyData.json", "/not/a/real/url"],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "1s"
+      }
+    }
   ]
 }
+

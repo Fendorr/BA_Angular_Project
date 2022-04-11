@@ -5,13 +5,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
-export class TopBarComponent implements OnInit {
-
+export class TopBarComponent {
   @Output() toggleSidenav = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
