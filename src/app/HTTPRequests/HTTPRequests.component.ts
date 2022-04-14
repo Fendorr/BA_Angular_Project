@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Data, DataService } from './data.service';
 
 @Component({
@@ -8,22 +8,30 @@ import { Data, DataService } from './data.service';
 })
 export class HTTPRequestsComponent {
   data: Data[] = [];
-  error: any;
+  error: string = "";
 
   constructor(private dataService: DataService) { }
 
-  clear() {
-    this.data = [];
-    this.error = undefined;
-  }
-
   showData() {
+    this.clear();
     this.dataService.getData().subscribe(
-      data => (this.data = data)
+      (result) => (
+        this.data = result
+      )
     )
   }
 
   makeError() {
-    this.dataService.makeIntentionalError().subscribe({ error: error => this.error = error.message });
+    this.clear();
+    this.dataService.makeIntentionalError().subscribe({ 
+        error: error => (
+          this.error = error.message 
+        )
+    });
+  }
+
+  private clear() {
+    this.data = [];
+    this.error = "";
   }
 }

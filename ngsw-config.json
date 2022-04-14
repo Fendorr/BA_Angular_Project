@@ -30,7 +30,7 @@
   "dataGroups": [
     {
       "name":"http-request",
-      "urls":["/app/assets/dummyData.json", "/not/a/real/url"],
+      "urls":["not/a/real/url"],
       "cacheConfig": {
         "strategy": "performance",
         "maxSize": 100,

@@ -9,7 +9,7 @@ import { FormBuilder } from '@angular/forms';
 export class FormsComponent implements OnInit {
   isSubmitted: boolean = false;
 
-  checkoutForm = this.formBuilder.group({
+  groupedForm = this.formBuilder.group({
     firstName: '',
     lastName: '',
     age: ''
@@ -23,12 +23,12 @@ export class FormsComponent implements OnInit {
 
   onSubmit(): void {
     this.isSubmitted = true;
-    console.warn('Form submitted', this.checkoutForm.value)
+    console.warn('Form submitted', this.groupedForm.value)
   }
 
   resetForm(): void{
     this.isSubmitted = false;
-    this.checkoutForm.reset();
+    this.groupedForm.reset();
   }
 
 }

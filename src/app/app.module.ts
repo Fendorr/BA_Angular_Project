@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TopBarComponent } from './topbar/topbar.component';
 import { NavBarComponent } from './NavBar/NavBar.component';
-import { GridComponent } from './Grid/Grid.component';
+import { GridExampleComponent } from './GridExample/GridExample.component';
 import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -29,7 +29,7 @@ import { environment } from '../environments/environment';
     AppComponent,
     TopBarComponent,
     NavBarComponent,
-    GridComponent,
+    GridExampleComponent,
     FormsComponent,
     SeperateBindingExampleComponent,
     InputOutputShowcaseComponent,
@@ -48,7 +48,7 @@ import { environment } from '../environments/environment';
     MatInputModule,
     MatButtonModule,
     RouterModule.forRoot([
-    { path: '', component: GridComponent },
+    { path: '', component: GridExampleComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'bindings', component: BindingsComponent },
     { path: 'http', component: HTTPRequestsComponent },

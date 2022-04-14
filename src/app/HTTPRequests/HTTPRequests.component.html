@@ -3,12 +3,13 @@
   <p>Click the buttons to fetch data from src/assets/dummyData.json</p>
   <br>
 
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px">
-    <button mat-raised-button (click)="clear(); showData()" fxLayoutAlign="center">showData</button>
-    <button mat-raised-button (click)="clear(); makeError()" fxLayoutAlign="center">makeError</button>
+  <div fxLayout="row" fxLayout.xs="column"
+  fxLayoutAlign="center" fxLayoutGap="10px">
+    <button mat-raised-button (click)="showData()">showData</button>
+    <button mat-raised-button (click)="makeError()">makeError</button>
   </div>
 
-  <div *ngIf="data.length > 0">
+  <div *ngIf="data.length != 0">
     <ul>
       <li *ngFor="let data of data">
         <div>ID: {{data.id}}</div>

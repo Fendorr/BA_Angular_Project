@@ -10,11 +10,12 @@
       <mat-divider></mat-divider>
       <br>
       <mat-card-content>
-        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="groupedForm" (ngSubmit)="onSubmit()">
           <mat-form-field class="full-width-form-field" appearance="fill">
             <mat-label>Firstname</mat-label>
             <input matInput type="text" formControlName="firstName">
           </mat-form-field>
+          <!-- other inputs -->
           <p>
             <mat-form-field class="full-width-form-field" appearance="fill">
               <mat-label>Lastname</mat-label>
@@ -39,9 +40,9 @@
       <mat-divider></mat-divider>
       <br>
       <mat-card-content>
-        <p>firstName: {{this.checkoutForm.get("firstName")!.value}}</p>
-        <p>lastName: {{this.checkoutForm.get("lastName")!.value}}</p>
-        <p>age: {{this.checkoutForm.get("age")!.value}}</p>
+        <p>firstName: {{this.groupedForm.get("firstName")!.value}}</p>
+        <p>lastName: {{this.groupedForm.get("lastName")!.value}}</p>
+        <p>age: {{this.groupedForm.get("age")!.value}}</p>
         <button mat-raised-button class="reset-btn" (click)="resetForm()">Reset form</button>
         <mat-divider></mat-divider>
         <h4>OBACHT!</h4>

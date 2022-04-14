@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Dynamic Columns and Grid Showcase</h1>
+    <p>Resize the window to see Angular "flex-layout" in action</p>
+    <br>
+
+    <div fxLayout="column" fxLayoutGap="16px">
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <div fxFlex="33.3%" fxFlex.lt-sm="100%">
+                {{text}}
+            </div>
+            <div fxFlex="33.3%" fxFlex.lt-sm="100%">
+                {{text}}
+            </div>
+            <div fxFlex="33.3%" fxFlex.lt-sm="100%">
+                {{text}}
+            </div>
+        </div>
+        <br>
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <img fxFlex="calc(55% - 16px)" class="responsive-img" 
+            [src]="doggo1">
+            <img fxFlex="calc(45% - 16px)" class="responsive-img" 
+            [src]="robbenbaby1">
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <div fxFlex="calc(50% - 16px)" fxLayout="column" 
+            fxLayout.lt-sm="row" fxLayoutGap="16px">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" 
+                [src]="doggo2">
+                <img fxFlex="calc(50% - 16px)" class="responsive-img" 
+                [src]="robbenbaby4">
+            </div>
+            <img fxFlex="calc(50% - 16px)" class="responsive-img" 
+            [src]="doggo5">
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <img fxFlex="calc(33% - 16px)" class="responsive-img" 
+            [src]="doggo4">
+            <img fxFlex="calc(33% - 16px)" class="responsive-img" 
+            [src]="robbenbaby2">
+            <img fxFlex="calc(33% - 16px)" class="responsive-img" 
+            [src]="doggo3">
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
