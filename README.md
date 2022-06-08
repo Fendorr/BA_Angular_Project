@@ -1,3 +1,15 @@
+# Prerequisites
+
+installed Node.js including the Node Package Manager (NPM)
+
+# Install Angular CLI
+
+Run `npm install -g @angular/cli` to install the Angular CLI globally.
+
+# Install Node Modules
+
+Run `npm install`
+
 # BAAngularProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
